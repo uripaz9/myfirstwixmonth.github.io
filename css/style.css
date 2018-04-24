@@ -1,0 +1,471 @@
+/* start reset*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.focus,
+:focus {
+    outline: none !important;
+}
+
+.container,
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.col-xs-20 {
+    float: left;
+    width: 20%;
+}
+
+.carousel {
+    visibility: hidden;
+}
+
+.carousel.slick-slider {
+    visibility: visible;
+}
+
+.carousel.slickNoSlide {
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.carousel.slickNoSlide .slick-track {
+    width: 100% !important;
+    text-align: center !important;
+    -moz-transform: inherit !important;
+    -ms-transform: inherit !important;
+    -o-transform: inherit !important;
+    -webkit-transform: inherit !important;
+    transform: inherit !important;
+    white-space: nowrap;
+}
+
+.carousel.slickNoSlide .slick-slide {
+    float: none !important;
+    display: inline-block !important;
+    white-space: normal;
+}
+
+.carousel .slick-slide {
+    float: right;
+}
+
+/* end reset*/
+
+body,
+html {
+    height: 100vh;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.topDays {
+    height: 70px;
+    background-color: #eff1f2;
+}
+
+.rowtopDaysList {
+    height: 100%;
+}
+
+.topDayName {
+    line-height: 70px;
+    text-align: center;
+    color: #66737c;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.calendar {
+    background: lightgray;
+    height: calc(100vh - 70px);
+}
+
+.calendarList {
+    height: 100%;
+}
+
+.dayBox {
+    height: 25%;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid #eff1f2;
+    border-bottom: 1px solid #eff1f2;
+    cursor: pointer;
+}
+
+.dayBox.noneBorderRight {
+    border-right: none;
+}
+
+.dayBox.nextMonth {
+    border-bottom: none;
+    cursor: auto;
+}
+
+.dayBox.nextMonth .dayNumber {
+    color: #a3abb0;
+}
+
+.dayBox.nextMonth:hover .dayNumber {
+    color: #a3abb0;
+}
+
+.dayBox .defaultImg {
+    display: block;
+}
+
+.dayBox .hoverImg {
+    display: none;
+}
+
+.dayBox .dayNumber {
+    color: #20303c;
+    padding: 15px 0 0 20px;
+    display: inline-block;
+    position: absolute;
+    /*font-family: 'Sanchez', serif;*/
+    /*letter-spacing: 1.1px;*/
+}
+
+.dayBox:hover .dayNumber {
+    color: white;
+    z-index: 1;
+}
+
+.dayBox.commingSoon {
+    cursor: default;
+}
+
+.dayBox.commingSoon:hover .dayNumber {
+    color: #20303c;
+}
+
+.commingText {
+    font-family: 'Gamja Flower', cursive;
+    color: #a3abb0;
+    position: absolute;
+    right: -20px;
+    top: 50px;
+    text-transform: uppercase;
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+    /* IE */
+    -ms-transform: rotate(90deg);
+    /* Opera */
+    -o-transform: rotate(90deg);
+    opacity: 0;
+}
+
+.dayBox.commingSoon:hover .commingText {
+    opacity: 1;
+}
+
+.dayBox:hover .defaultImg {
+    display: none;
+}
+
+.dayBox:hover .hoverImg {
+    display: block;
+}
+
+.centerImg {
+    position: absolute;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+
+.rightImg {
+    position: absolute;
+    display: inline-block;
+    transform: translateY(-50%);
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.leftImg {
+    position: absolute;
+    display: inline-block;
+    transform: translateY(-50%);
+    left: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.bottomImg {
+    position: absolute;
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.topImg {
+    position: absolute;
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    z-index: 1;
+}
+
+.bgImg {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 0;
+    min-width: 100%;
+}
+
+.sliderLightbox {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 760px;
+    display: none;
+    z-index: 1;
+}
+
+.sliderContainer {
+    max-width: 760px;
+    position: relative;
+    -webkit-box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.3);
+}
+
+.sliderContainer:before {
+    content: "";
+    background-color: black;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.slick-slider .slick-list {
+    background-color: #ffffff;
+    height: 400px !important;
+    max-width: 760px;
+}
+
+.sliderRow {
+    width: 760px;
+}
+
+.sliderImgContainer {
+    width: 550px;
+}
+
+.sliderImg {
+    width: 100%;
+    height: auto;
+}
+
+.sliderTextContainer {
+    width: 210px;
+    text-align: center;
+    height: 400px;
+    -webkit-box-shadow: -6px 0px 10px -5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -6px 0px 10px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px 0px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.closeSlider .btn {
+    padding: 0;
+    margin-top: 30px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    right: 90px;
+}
+
+.bigNumberDay {
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-size: 80px;
+    color: #20303c;
+    font-weight: 300;
+}
+
+.dayName {
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding-top: 130px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #66737c;
+    letter-spacing: 6px;
+}
+
+.dayDescription {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    color: #66737c;
+    padding: 0 15px 36px 15px;
+    line-height: 1;
+    font-family: 'Gamja Flower', cursive;
+
+}
+
+.link {
+    color: #66737c;
+    border-bottom: 1px solid #66737c;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #20303c;
+}
+
+.slick-prev.slick-arrow {
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 550px;
+    font-size: 0;
+    width: 14px;
+    height: 36px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.slick-prev.slick-arrow:before {
+    content: "";
+    background: url("../img/slideImg/leftArrow.png") no-repeat center center;
+    width: 14px;
+    height: 36px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.slick-next.slick-arrow {
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+    font-size: 0;
+    width: 14px;
+    height: 36px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.slick-next.slick-arrow:before {
+    content: "";
+    background: url("../img/slideImg/rightArrow.png") no-repeat center center;
+    width: 14px;
+    height: 36px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
