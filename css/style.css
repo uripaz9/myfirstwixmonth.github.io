@@ -220,10 +220,10 @@ html {
 }
 
 .commingText {
-    font-family: 'Courgette', cursive;
+    /*font-family: 'Courgette', cursive;*/
     color: #a3abb0;
     position: absolute;
-    right: -20px;
+    right: -25px;
     top: 58px;
     text-transform: uppercase;
     /* Safari */
