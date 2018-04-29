@@ -13,7 +13,7 @@ function onClickBox() {
 
         var day = $(this).find(".dayNumber").text();
 
-        if (day !== "1" && day !== "2" && day !== "3" && day !== "29" && day !== "30") {
+        if (day !== "1" && day !== "2" && day !== "3" && day !== "30") {
             $(".sliderLightbox").show();
         }
         else {
@@ -67,7 +67,7 @@ function onClickBox() {
                 $('.calendarSlider').slick('slickGoTo', 14);
                 break;
             case "29":
-                console.log(day);
+                $('.calendarSlider').slick('slickGoTo', 15);
                 break;
             case "30":
                 console.log(day);
