@@ -511,13 +511,25 @@ html {
         max-height: 50px;
     }
 
-    .bgImg {
+    .dayBox:hover .hoverImg.bgImg {
+        display: none;
+    }
+
+    .dayBox:hover .defaultImg {
+        display: block;
+    }
+
+    .dayBox:hover .hoverImg {
         display: none;
     }
 
     .dayBox .dayNumber {
         padding: 4px;
         font-size: 10px;
+    }
+
+    .dayBox:hover .dayNumber {
+        color: #20303c;
     }
 
     .sliderLightbox {
@@ -553,6 +565,8 @@ html {
 
     .bigNumberDay {
         font-size: 30px;
+        letter-spacing: -2px;
+        padding-right: 2px;
     }
 
     .dayName {
@@ -560,16 +574,16 @@ html {
     }
 
     .dayDescription {
-        font-size: 13px;
-        padding: 10px;
+        font-size: 12px;
+        padding: 5px;
     }
 
     .slick-next.slick-arrow {
-        margin: 0;
+        margin-right: 3px;
     }
 
     .slick-prev.slick-arrow {
-        left: 190px;
+        left: 193px;
     }
 
     .slick-next.slick-arrow:before {
