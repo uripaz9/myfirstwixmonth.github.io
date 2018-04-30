@@ -488,10 +488,7 @@ html {
     background-size: 35%;
 }
 
-@media only screen and (max-width: 768px) {
-    .topDays {
-        background-color: yellow;
-    }
+@media only screen and (max-width: 767px) {
 
     .topDayName {
         text-transform: capitalize;
@@ -499,10 +496,6 @@ html {
         font-size: 12px;
     }
 
-    /*.dayBox .defaultImg {*/
-    /*max-width: 50px;*/
-    /*max-height: 30px;*/
-    /*}*/
     .rightImg, .leftImg, .centerImg {
         max-width: 50px;
         max-height: 30px;
@@ -519,6 +512,71 @@ html {
     }
 
     .bgImg {
-        min-height: 100%;
+        display: none;
+    }
+
+    .dayBox .dayNumber {
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    .sliderLightbox {
+        width: 320px;
+        padding: 20px;
+    }
+
+    .slick-slider .slick-list {
+        height: 150px !important;
+    }
+
+    .sliderRow {
+        width: 100%;
+    }
+
+    .sliderImgContainer {
+        width: 75%;
+    }
+
+    .sliderTextContainer {
+        width: 25%;
+        height: 150px;
+    }
+
+    .closeSlider .btn {
+        margin-top: 5px;
+        right: 27px;
+    }
+
+    .closeSlider .btn img {
+        width: 15px;
+    }
+
+    .bigNumberDay {
+        font-size: 30px;
+    }
+
+    .dayName {
+        display: none;
+    }
+
+    .dayDescription {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .slick-next.slick-arrow {
+        margin: 0;
+    }
+
+    .slick-prev.slick-arrow {
+        left: 190px;
+    }
+
+    .slick-next.slick-arrow:before {
+        background-size: 50%;
+    }
+
+    .slick-prev.slick-arrow:before {
+        background-size: 50%;
     }
 }
