@@ -496,19 +496,9 @@ html {
         font-size: 12px;
     }
 
-    .rightImg, .leftImg, .centerImg {
+    .rightImg, .leftImg, .centerImg, .topImg, .bottomImg {
         max-width: 50px;
         max-height: 30px;
-    }
-
-    .topImg {
-        max-width: 50px;
-        max-height: 50px;
-    }
-
-    .bottomImg {
-        max-width: 50px;
-        max-height: 50px;
     }
 
     .dayBox:hover .hoverImg.bgImg {
