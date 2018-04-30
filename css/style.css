@@ -487,3 +487,38 @@ html {
     right: 60px;
     background-size: 35%;
 }
+
+@media only screen and (max-width: 768px) {
+    .topDays {
+        background-color: yellow;
+    }
+
+    .topDayName {
+        text-transform: capitalize;
+        letter-spacing: 0;
+        font-size: 12px;
+    }
+
+    /*.dayBox .defaultImg {*/
+    /*max-width: 50px;*/
+    /*max-height: 30px;*/
+    /*}*/
+    .rightImg, .leftImg, .centerImg {
+        max-width: 50px;
+        max-height: 30px;
+    }
+
+    .topImg {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .bottomImg {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .bgImg {
+        min-height: 100%;
+    }
+}
